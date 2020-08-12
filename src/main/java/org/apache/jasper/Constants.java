@@ -69,14 +69,18 @@ public class Constants {
     public static final String SERVICE_METHOD_NAME =
             System.getProperty("org.apache.jasper.Constants.SERVICE_METHOD_NAME", "_jspService");
 
+    private static final String SERVLET_PACKAGE = "javax.servlet";
+    private static final String SERVLET_HTTP_PACKAGE = "javax.servlet.http";
+    private static final String JSP_PACKAGE = "javax.servlet.jsp";
+
     /**
      * These classes/packages are automatically imported by the
      * generated code.
      */
     private static final String[] PRIVATE_STANDARD_IMPORTS = {
-        "javax.servlet.*",
-        "javax.servlet.http.*",
-	"javax.servlet.jsp.*"
+        SERVLET_PACKAGE + ".*",
+        SERVLET_HTTP_PACKAGE + ".*",
+	    JSP_PACKAGE + ".*"
     };
     public static final List<String> STANDARD_IMPORTS =
         Collections.unmodifiableList(Arrays.asList(PRIVATE_STANDARD_IMPORTS));
